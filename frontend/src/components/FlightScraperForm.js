@@ -50,8 +50,7 @@ function FlightsScraper() {
 		axios
 			.get(`${server}/api/v1/flights?from=${from}&months=${range}&length=${item}`)
 			.then((res) => {
-				console.log(res.data);
-				setData([...data, res.data]);
+				setData((data) => [...data, res.data]);
 				setLoading(false);
 				makeRequest(index + 1);
 			})

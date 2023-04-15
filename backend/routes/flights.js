@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { checkByRange } = require("../hooks/checkByRange");
 const airports = require("../airports.json");
+const test = require("../test.json");
 
 router.get("/", async (req, res) => {
 	const from = airports
